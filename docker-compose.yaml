@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:latest
+    container_name: research_jooq_postgres
+    environment:
+      POSTGRES_DB: research_jooq
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./init-scripts:/docker-entrypoint-initdb.d
+    networks:
+      - research_network
+
+volumes:
+  postgres_data:
+
+networks:
+  research_network:
+    driver: bridge

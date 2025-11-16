@@ -1,0 +1,33 @@
+databaseChangeLog:
+  - changeSet:
+      id: 01_create_user_table.sql
+      author: oleborn
+      sqlFile:
+        path: changelog/01_create_user_table.sql
+        relativeToChangelogFile: true
+        splitStatements: false
+        endDelimiter: ;
+  - changeSet:
+      id: 02_create_car_table.sql
+      author: oleborn
+      sqlFile:
+        path: changelog/02_create_car_table.sql
+        relativeToChangelogFile: true
+        splitStatements: false
+        endDelimiter: ;
+  - changeSet:
+      id: 03_create_user_cars_table.sql
+      author: oleborn
+      sqlFile:
+        path: changelog/03_create_user_cars_table.sql
+        relativeToChangelogFile: true
+        splitStatements: false
+        endDelimiter: ;
+  - changeSet:
+      id: 04_create_address_table.sql
+      author: oleborn
+      sqlFile:
+        path: changelog/04_create_address_table.sql
+        relativeToChangelogFile: true
+        splitStatements: false
+        endDelimiter: ;
